@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-links li span {
+  position: relative;
+  z-index: 0;
+}
+
+.header-links li span::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 2px;
+  left: -4px;
+  right: -4px;
+  display: block;
+  height: 6px;
+}
+
+.header-links li.active span::before {
+  background-color: #fcae04;
+}
+
+.header-links li:not(.active):hover span::before {
+  background-color: #ccc;
+}
+.AboutBgFon {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-image: url(https://usercontent2.hubstatic.com/14134431_f1024.jpg);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AboutParalax {
+  background-image: url(https://static.wixstatic.com/media/ae716c_3bac69cbdeb947c8be352cef7418a306~mv2.jpeg/v1/fill/w_960,h_430,al_c,lg_1,q_85,enc_auto/ae716c_3bac69cbdeb947c8be352cef7418a306~mv2.jpeg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.HomeBgFon {
+  background-color: rgb(230, 230, 230);
+  background-image: url(https://bravosupermarket.az/site/assets/files/1035/110.svg);
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.HomeBgFon2 {
+  background-color: rgb(230, 230, 230);
+  background-image: url(https://bravosupermarket.az/site/assets/files/1036/111.svg);
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
