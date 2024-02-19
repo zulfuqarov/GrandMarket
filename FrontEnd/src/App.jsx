@@ -11,7 +11,7 @@ import Custome from "./components/CUSTOME/Custome";
 
 // project template links
 // http://preview.themeforest.net/item/veggie-supermarket-professional-html-template/full_screen_preview/12406095?_ga=2.234528094.1571227709.1707320525-2062948680.1705790704
-// deyisiklik olundu git yoxlamaq uchun
+
 
 function App() {
 

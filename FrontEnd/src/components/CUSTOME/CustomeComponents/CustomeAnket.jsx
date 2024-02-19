@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TEInput, TERipple, TETextarea } from "tw-elements-react";
 
 const CustomeAnket = () => {
+
+    const [input, setInput] = useState({
+        Email: '',
+        Name: '',
+        Number: '',
+        Text: ''
+    })
+
+    const handleChangeInput = (event) => {
+        const { name, value } = event.target
+        setInput({
+            ...input,
+            [name]: value
+        })
+    }
+
+    const FormOnSubmit = (event) => {
+        event.preventDefault();
+        console.log(input)
+    }
+
     return (
         <section className='pt-[80px]'>
 
@@ -11,27 +32,36 @@ const CustomeAnket = () => {
                 </div>
             </header>
 
-            <div className='flex flex-row pt-[60px]'>
-                <div className='basis-3/6 ml-[30px]'>
+            <div className='flex flex-row pt-[60px] max-[911px]:items-center max-[911px]:flex-col'>
+                <div className='basis-3/6  ml-[30px] max-[911px]:ml-[0px]'>
                     <div className="block max-w-sm rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                        <form>
+                        <form onSubmit={FormOnSubmit}>
                             {/* <!--Name input--> */}
                             <TEInput
                                 type="text"
                                 label="*Ad,Soyad"
                                 className="mb-6"
+                                onChange={handleChangeInput}
+                                value={input.Name}
+                                name='Name'
                             ></TEInput>
                             {/* <!--E-mail input--> */}
                             <TEInput
                                 type="email"
                                 label="*E-poçt"
                                 className="mb-6 "
+                                onChange={handleChangeInput}
+                                value={input.Email}
+                                name='Email'
                             ></TEInput>
                             {/* Contact nuber */}
                             <TEInput
                                 type="nuber"
                                 label="*Əlaqə nömrəsi"
                                 className="mb-6"
+                                onChange={handleChangeInput}
+                                value={input.Number}
+                                name='Number'
                             ></TEInput>
 
                             {/* <!--Message textarea--> */}
@@ -40,6 +70,9 @@ const CustomeAnket = () => {
                                     id="exampleFormControlTextarea13"
                                     label="Message"
                                     rows={3}
+                                    onChange={handleChangeInput}
+                                    value={input.Text}
+                                    name='Text'
                                 />
                             </div>
 
@@ -62,7 +95,7 @@ const CustomeAnket = () => {
                             {/* <!--Submit button--> */}
                             <TERipple rippleColor="light" className="w-full">
                                 <button
-                                    type="button"
+                                    type="submit"
                                     className="inline-block rounded w-full bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                 >
                                     Send
@@ -71,17 +104,18 @@ const CustomeAnket = () => {
                         </form>
                     </div>
                 </div>
-                <div className='basis-3/6 '>
+                <div className='basis-3/6 max-[911px]:pt-[30px] max-[911px]:w-[50%] max-[911px]:text-center'>
 
                     <div>
-                        <h1 className='text-[20px] text-red-700 font-semibold py-[20px]'>Hörmətli müştəri,</h1>
+                        <h1 className='text-[20px]  text-red-700 font-semibold py-[20px]'>Hörmətli müştəri,</h1>
                     </div>
-                    <span className='text-[18px] text-gray-700 inline-block py-[20px]'>Fəaliyyətimizlə bağlı har hansı irad və ya təklifiniz varsa, zəhmət olmazsa elektron formanı doldurun.</span>
-                    <p className='text-[19px] font-bold text-black py-[5px]'>Sizin sorğunuz 5 iş günü ərzində cavablandırılacaqdır.</p>
-                    <span className='text-[18px] text-gray-700 inline-block py-[20px]'>Məsul şəxs: Arzu Orduyeva, Kənan Şirinov.</span>
-                    <span className='text-[18px] text-gray-700 inline-block py-[20px]'>Əlaqə nömrəsi</span>
-                    <span className='text-[18px] text-gray-700 inline-block py-[20px]'>Tel.:   012 596 56 09</span>
-                    <span className='text-[18px] text-gray-700 inline-block py-[20px]'>Mob.: 055 355 13 34</span>
+                    <span className='text-[18px] leading-[30px] max-[911px]:text-[17px] text-gray-700 inline-block py-[20px]'>Fəaliyyətimizlə bağlı har hansı irad və ya təklifiniz varsa, zəhmət olmazsa elektron formanı doldurun.</span>
+                    <p className='text-[19px] max-[911px]:text-[18px] font-bold text-black py-[5px]'>Sizin sorğunuz 5 iş günü ərzində cavablandırılacaqdır.</p>
+                    <span className='text-[18px] max-[911px]:text-[17px] text-gray-700 inline-block py-[20px]'>Məsul şəxs: Arzu Orduyeva, Kənan Şirinov.</span>
+                    <span className='text-[18px] max-[911px]:text-[17px] text-gray-700 inline-block py-[20px]'>Əlaqə nömrəsi</span>
+                    <span className='text-[18px] max-[911px]:text-[17px] text-gray-700 inline-block py-[20px]'>Tel.:   012 596 56 09</span>
+                    <span className='text-[18px] max-[911px]:text-[17px] text-gray-700 inline-block py-[20px]'>Mob.: 055 355 13 34</span>
+
                 </div>
             </div>
 
