@@ -1,14 +1,104 @@
 import React, { useState } from 'react'
 import { TEInput, TERipple, TETextarea } from "tw-elements-react";
+import axios from "axios"
+
+
 
 const CustomeAnket = () => {
 
     const [input, setInput] = useState({
         Email: '',
         Name: '',
-        Number: '',
+        Number: '+994 ',
         Text: ''
     })
+
+    const [CheckInputs, setCheckInputs] = useState({
+        CheckEmail: null,
+        CheckName: null,
+        CheckNumber: null,
+        CheckText: null
+    })
+
+    const DisabledButton = () => {
+        const CheckInputsArry = Object.values(CheckInputs)
+        const CheckInputEvery = CheckInputsArry.every((oneEverey) => {
+            return oneEverey === true
+        })
+        return (CheckInputEvery)
+    }
+
+    const InputRegular = (InputName, value) => {
+        switch (InputName) {
+            case "Name":
+                if (value.length < 4) {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckName: false
+                        })
+                    )
+                } else {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckName: true
+                        })
+                    )
+                }
+            case "Email":
+                if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckEmail: true
+                        })
+                    )
+                } else {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckEmail: false
+                        })
+                    )
+                }
+            case "Number":
+                if (/^\+994\s?\d{2,3}(\s?\d{2,3}){2,3}$/.test(value)) {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckNumber: true
+                        })
+                    )
+                } else {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckNumber: false
+                        })
+                    )
+                }
+            case "Text":
+                if (value.length > 20) {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckText: true
+                        })
+                    )
+                } else {
+                    return (
+                        setCheckInputs({
+                            ...CheckInputs,
+                            CheckText: false
+                        })
+                    )
+                }
+            default:
+                alert('duzgun olunmadi')
+                break;
+        }
+    }
 
     const handleChangeInput = (event) => {
         const { name, value } = event.target
@@ -16,11 +106,26 @@ const CustomeAnket = () => {
             ...input,
             [name]: value
         })
+        InputRegular(name, value)
+    }
+
+    const SendEmailSms = async (body) => {
+        try {
+            const Respons = axios.post("http://localhost:4444/api/Email", body)
+            console.log((await Respons).data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const FormOnSubmit = (event) => {
         event.preventDefault();
-        console.log(input)
+        if (DisabledButton()) {
+            SendEmailSms(input)
+            alert("Mesaj uğurla göndərildi geri dönüş olunacaq")
+        } else {
+            alert("Yerləri düzgün tammamlayın !!")
+        }
     }
 
     return (
@@ -45,6 +150,9 @@ const CustomeAnket = () => {
                                 value={input.Name}
                                 name='Name'
                             ></TEInput>
+                            <div className={`h-[0px]  overflow-y-hidden ${CheckInputs.CheckName !== false ? "" : 'h-[30px] text-red-500 overflow-y-visible mb-[20px] rounded-xl flex justify-center items-center'}  `}>
+                                <h1 className='text-red-500 '>Adınız qısadır!</h1>
+                            </div>
                             {/* <!--E-mail input--> */}
                             <TEInput
                                 type="email"
@@ -54,6 +162,9 @@ const CustomeAnket = () => {
                                 value={input.Email}
                                 name='Email'
                             ></TEInput>
+                            <div className={`h-[0px]  overflow-y-hidden ${CheckInputs.CheckEmail !== false ? "" : 'h-[30px] text-red-500 overflow-y-visible mb-[20px] rounded-xl flex justify-center items-center'}  `}>
+                                <h1 className='text-red-500 '>Email düzgün daxil ediniz !</h1>
+                            </div>
                             {/* Contact nuber */}
                             <TEInput
                                 type="nuber"
@@ -63,7 +174,9 @@ const CustomeAnket = () => {
                                 value={input.Number}
                                 name='Number'
                             ></TEInput>
-
+                            <div className={`h-[0px]  overflow-y-hidden ${CheckInputs.CheckNumber !== false ? "" : 'h-[30px] text-red-500 overflow-y-visible mb-[20px] rounded-xl flex justify-center items-center'}  `}>
+                                <h1 className='text-red-500 '>Nömrəni düzgün daxil ediniz!</h1>
+                            </div>
                             {/* <!--Message textarea--> */}
                             <div className="relative mb-6">
                                 <TETextarea
@@ -74,6 +187,9 @@ const CustomeAnket = () => {
                                     value={input.Text}
                                     name='Text'
                                 />
+                                <div className={`h-[0px]  overflow-y-hidden ${CheckInputs.CheckText !== false ? "" : 'h-[30px] text-red-500 overflow-y-visible mb-[20px] mt-[20px] rounded-xl flex justify-center items-center'}  `}>
+                                    <h1 className='text-red-500 '>İrad və Təkliflərinizi ətraflı yazın !</h1>
+                                </div>
                             </div>
 
                             {/* <!--Checkbox--> */}

@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar_Footer/Navbar";
 import Footer from "./components/Navbar_Footer/Footer";
 import Branches from "./components/BRANCHES/Branches";
 import Custome from "./components/CUSTOME/Custome";
-
+import Discounts from "./components/Discounts/Discounts"
 
 
 // project template links
@@ -23,6 +23,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Branches" element={<Branches />} />
         <Route path="/Custome" element={<Custome />} />
+        <Route path="/Discounts" element={<Discounts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

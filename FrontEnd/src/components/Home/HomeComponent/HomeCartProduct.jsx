@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Grid, Pagination } from 'swiper/modules';
+import { Grid, Pagination, Autoplay } from 'swiper/modules';
 
 // import img start
 import ImageGrid from '../img/ae716c_2f0517005e4e4b74829b38c762f4ba08~mv2.webp'
@@ -29,11 +29,11 @@ import ImageGrid9 from '../img/ae716c_e0ec635e9b9d4c629c2aec352e9f28e6~mv2.webp'
 const HomeCartProduct = () => {
     return (
         <section className='container mx-auto'>
-            <div className='pt-[80px] flex flex-row items-center justify-around'>
+            <div className='pt-[80px] flex flex-row max-[648px]:flex-col items-center justify-around'>
                 <div>
                     <h1 className='text-[32px] text-blue-400 font-bold max-[540px]:text-[20px]'>ENDIRIMLƏR</h1>
                 </div>
-                <div>
+                <div className='max-[648px]:pt-[20px]'>
                     <ButtonPromps ButtonName='ƏTRAFLI ' />
                 </div>
             </div>
@@ -43,6 +43,10 @@ const HomeCartProduct = () => {
                     grid={{
                         rows: 2,
                         fill: "row",
+                    }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
                     }}
                     spaceBetween={30}
                     breakpoints={{
@@ -65,7 +69,7 @@ const HomeCartProduct = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Grid, Pagination]}
+                    modules={[Grid, Pagination, Autoplay]}
                     className="mySwiper"
                 >
                     <SwiperSlide>

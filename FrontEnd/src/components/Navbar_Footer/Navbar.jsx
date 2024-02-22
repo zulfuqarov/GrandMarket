@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+
 const Navbar = () => {
+
+    const url = useLocation()
     return (
         <header className="bg-white shadow-lg h-24 hidden md:flex">
             <Link to="" className="border flex-shrink-0 flex items-center justify-center px-4 lg:px-6 xl:px-8">
@@ -8,22 +12,27 @@ const Navbar = () => {
             </Link>
             <nav className="header-links contents  font-semibold text-base lg:text-lg">
                 <ul className="flex items-center w-full justify-center  ml-4 xl:ml-8 mr-auto">
-                    <li className="p-3 xl:p-6 active">
+                    <li className={`p-3 xl:p-6 ${url.pathname === '/' ? 'active' : ''}`}>
+                        <Link to="/">
+                            <span>Ana-Səhifə</span>
+                        </Link>
+                    </li>
+                    <li className={`p-3 xl:p-6 ${url.pathname === '/About' ? 'active' : ''}`}>
                         <Link to="/About">
                             <span>HAQQIMIZDA</span>
                         </Link>
                     </li>
-                    <li className="p-3 xl:p-6">
+                    <li className={`p-3 xl:p-6 ${url.pathname === '/Branches' ? 'active' : ''}`}>
                         <Link to="/Branches">
                             <span>FİLİALLAR</span>
                         </Link>
                     </li>
-                    <li className="p-3 xl:p-6">
-                        <Link to="">
+                    <li className={`p-3 xl:p-6 ${url.pathname === '/Discounts' ? 'active' : ''}`}>
+                        <Link to="/Discounts">
                             <span>ENDİRİMLƏR</span>
                         </Link>
                     </li>
-                    <li className="p-3 xl:p-6">
+                    <li className={`p-3 xl:p-6 ${url.pathname === '/Custome' ? 'active' : ''}`}>
                         <Link to="/Custome">
                             <span>MÜŞTƏRİLƏR</span>
                         </Link>

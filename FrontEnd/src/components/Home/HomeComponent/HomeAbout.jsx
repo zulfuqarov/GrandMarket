@@ -21,7 +21,7 @@ const HomeAbout = () => {
                             <h3 className='text-[28px] font-bold text-gray-800 mt-[15px]'>SƏRFƏLİ QİYMƏT</h3>
                         </div>
                     </div>
-                    <div className='flex justify-evenly items-center pt-[50px] max-[548px]:flex-col'>
+                    <div className='flex justify-evenly items-center pt-[50px] max-[640px]:flex-col'>
                         <div className='flex flex-col justify-center items-center'>
                             <svg className='w-[30px] h-[45px]' preserveAspectRatio="xMidYMid meet" data-bbox="0 0 35 52.22" viewBox="0 0 35 52.22" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs>
                             </defs>
@@ -33,7 +33,7 @@ const HomeAbout = () => {
                             </svg>
                             <h3 className='text-[28px] font-bold text-gray-800 mt-[15px]'>ÜSTÜN XİDMƏT</h3>
                         </div>
-                        <div className='flex flex-col justify-center items-center max-[548px]:pt-[50px]'>
+                        <div className='flex flex-col justify-center items-center max-[640px]:pt-[50px]'>
                             <svg className='w-[30px] h-[45px]' preserveAspectRatio="xMidYMid meet" data-bbox="0 0 35 52.22" viewBox="0 0 35 52.22" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs>
                             </defs>
                                 <g>
