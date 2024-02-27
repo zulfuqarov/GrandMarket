@@ -12,7 +12,7 @@ const Footer = () => {
           <div className='flex flex-row justify-between items-center'>
             <h1 className='text-[34px] font-semibold text-white max-[768px]:text-[20px]'>
               © 2013-23 | Grandmart supermarketlər şəbəkəsi
-            </h1>F
+            </h1>
             <div>
 
               <img src="https://static.wixstatic.com/media/ae716c_3c71723485e14966bc32032bfd7b8db6~mv2.png/v1/crop/x_127,y_8,w_787,h_429/fill/w_210,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/grand_logo-2.png" alt="" />
