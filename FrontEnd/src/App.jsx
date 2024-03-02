@@ -10,7 +10,8 @@ import Discounts from "./components/Discounts/Discounts"
 import Admin from "./components/Admin/Admin";
 import axios from "axios";
 import AdminSign from "./components/Admin/AdminComponent/AdminSign";
-
+import AdminAddProduct from './components/Admin/AdminComponent/AdminAddProduct'
+import AdminDepartment from './components/Admin/AdminComponent/AdminDepartment'
 axios.defaults.withCredentials = true;
 
 // project template links
@@ -28,8 +29,11 @@ function App() {
         <Route path="/Branches" element={<Branches />} />
         <Route path="/Custome" element={<Custome />} />
         <Route path="/Discounts" element={<Discounts />} />
-        <Route path="/Admin" element={<Admin />} />
         <Route path="/Admin-Sign" element={<AdminSign />} />
+        <Route path="/Admin" element={<Admin />} >
+          <Route path="Admin-Product" element={<AdminAddProduct />} />
+          <Route path="Admin-Department" element={<AdminDepartment />} />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

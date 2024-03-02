@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+const env = import.meta.env
 
 const AdminSign = () => {
     const navigate = useNavigate()
@@ -21,7 +22,7 @@ const AdminSign = () => {
     const AdminSign = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:4444/api/Admin/Sign', inputValue)
+            const response = await axios.post(`${env.REACT_APP_BACKEND_HOST}/Admin/Sign`, inputValue)
             if (response.status) {
                 navigate('/Admin')
             }

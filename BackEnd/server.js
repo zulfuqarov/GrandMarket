@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
-
+import fileUpload from "express-fileupload";
+import { v2 as cloudinary } from "cloudinary";
 // import All Route start
 import AllRoutes from "./routes/AllRoutes.js";
 // import All Route end
@@ -18,12 +19,20 @@ const corsOptions = {
 
 dotenv.config();
 
+// Config Clodinary start
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET_KEY,
+});
+// Config Clodinary end
+
 const Port = process.env.PORT;
 const Server = express();
 Server.use(cookieParser());
 Server.use(bodyParser.json());
 Server.use(cors(corsOptions));
-
+Server.use(fileUpload({ useTempFiles: true }));
 // Connecting MongoDB start
 const ConnectingDb = async () => {
   try {
@@ -34,6 +43,7 @@ const ConnectingDb = async () => {
   }
 };
 // Connecting MongoDB end
+// ---------------------
 
 Server.use("/api", AllRoutes);
 

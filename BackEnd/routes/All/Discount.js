@@ -1,12 +1,39 @@
 import Discount from "../../model/Discount.js";
 import express from "express";
-
+import cloudinary from "cloudinary";
 const router = express.Router();
 
+// router.post("/sekil", async (req, res) => {
+//   try {
+//     const result = await cloudinary.uploader.upload(
+//       req.files.image.tempFilePath,
+//       {
+//         use_filename: true,
+//         folder: "Home",
+//       }
+//     );
+//     console.log(result.url);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
+
 router.post("/DiscountPost", async (req, res) => {
+  const result = await cloudinary.uploader.upload(
+    req.files.image.tempFilePath,
+    {
+      use_filename: true,
+      folder: "Home",
+    }
+  );
   const body = req.body;
+
   try {
-    const newDiscount = new Discount(body);
+    const newDiscount = new Discount({
+      Category: body.Category,
+      Name: body.Name,
+      Img: result.url,
+    });
     await newDiscount.save();
 
     res.status(200).json(newDiscount);
