@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from 'react-router-dom'
 import axios from 'axios'
 import AdminHeader from './AdminComponent/AdminHeader'
 import AdminHeaderLinks from './AdminComponent/AdminHeaderLinks'
+import AdminLogout from './AdminComponent/AdminLogout'
 const env = import.meta.env
 
 const Admin = () => {
@@ -44,6 +45,7 @@ const Admin = () => {
         return (
             <section>
                 <AdminHeader />
+                <AdminLogout />
                 <div className='mx-auto container'>
                     <div className=' flex  pt-[80px]'>
                         <AdminHeaderLinks />

@@ -118,4 +118,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/Logout", async (req, res) => {
+  try {
+    res.clearCookie("jwtToken");
+    res.status(200).json("sifirlandi");
+  } catch (error) {
+    res.status(400).json(error);
+    console.log(error);
+  }
+});
+
 export default router;

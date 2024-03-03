@@ -20,6 +20,7 @@ const AdminAddProduct = () => {
     { text: "Ət,Toyuq,Balıq", value: 11 },
   ];
 
+  const [statusError, setstatusError] = useState(null)
   const [Image, setImage] = useState(null)
   const [Input, setInput] = useState({
     Category: '',
@@ -51,16 +52,17 @@ const AdminAddProduct = () => {
       const res = await axios.post(`${env.REACT_APP_BACKEND_HOST}/Discount/DiscountPost`, fileUpload)
       console.log(res.data)
     } catch (error) {
-      console.log(error)
+      setstatusError(`${error.response.data.message}`)
     }
   }
 
 
   return (
     <div className='w-[85%]'>
-      <h1 className='text-center text-[26px] text-red-600 font-bold'>Endirimli Məhsulun Əlavəsi</h1>
+      <h1 className='text-center text-[26px] text-blue-600 font-bold'>Endirimli Məhsulun Əlavəsi</h1>
       <div className='flex justify-center pt-[60px] items-center w-[100%]'>
         <form encType="multipart/form-data" action="#">
+          <h1 className='text-center text-[18px] text-red-500 font-bold pb-[10px]'>{statusError}</h1>
           <TEInput
             type="text"
             label="*Məhsulun Adı"
