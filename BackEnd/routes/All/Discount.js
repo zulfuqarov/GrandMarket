@@ -23,7 +23,7 @@ router.post("/DiscountPost", async (req, res) => {
       });
       await newDiscount.save();
 
-      res.status(200).json(newDiscount);
+      res.status(200).json({ message: "Məhsul əlavə olundu !", newDiscount });
     } else {
       return res.status(400).json({
         message:

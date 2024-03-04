@@ -1,5 +1,6 @@
 import express from "express";
 import Partner from "../../model/Partner.js";
+import cloudinary from "cloudinary";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -13,12 +14,33 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/AddPartner", async (req, res) => {
+  if (!req.files || !req.files.PartnerImg) {
+    return res.status(400).json({ message: "Şəkil əlavə olunmayıb !" });
+  }
+  const ImageFolder = req.files.PartnerImg.tempFilePath;
   const body = req.body;
   try {
-    const newPartner = new Partner(body);
-    await newPartner.save();
+    if (ImageFolder && body.PartnerName && body.PartnerPosition) {
+      const result = await cloudinary.uploader.upload(ImageFolder, {
+        use_filename: true,
+        folder: "Home",
+      });
+      const newPartner = new Partner({
+        PartnerName: body.PartnerName,
+        PartnerPosition: body.PartnerPosition,
+        PartnerImg: result.url,
+      });
+      await newPartner.save();
 
-    res.status(200).json(newPartner);
+      res
+        .status(200)
+        .json({ message: "Department elave olundu !", newPartner });
+    } else {
+      return res.status(400).json({
+        message:
+          "Depatment əlavə olunmadı, Yenidən yoxlayın  Yerləri tamamlayın !",
+      });
+    }
   } catch (error) {
     console.log(error);
     return res
