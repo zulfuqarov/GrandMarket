@@ -1,5 +1,6 @@
 import ButtonPromps from '../../../components/PrompsComponent/Button'
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -34,7 +35,9 @@ const HomeCartProduct = () => {
                     <h1 className='text-[32px] text-blue-400 font-bold max-[540px]:text-[20px]'>ENDIRIMLƏR</h1>
                 </div>
                 <div className='max-[648px]:pt-[20px]'>
-                    <ButtonPromps ButtonName='ƏTRAFLI ' />
+                    <Link to='/More-Discount'>
+                        <ButtonPromps ButtonName='ƏTRAFLI ' />
+                    </Link>
                 </div>
             </div>
             <div className='pt-[60px]'>
