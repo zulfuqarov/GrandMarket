@@ -13,9 +13,7 @@ import AdminSign from "./components/Admin/AdminComponent/AdminSign";
 import AdminAddProduct from './components/Admin/AdminComponent/AdminAddProduct'
 import AdminDepartment from './components/Admin/AdminComponent/AdminDepartment'
 import MoreDiscount from "./components/Discounts/MoreDiscount/MoreDiscount";
-import Link1 from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/Link1'
-import Link2 from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/Link2'
-import Link3 from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/Link3'
+import CategoryCartds from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/CategoryCartds'
 axios.defaults.withCredentials = true;
 
 // project template links
@@ -39,9 +37,16 @@ function App() {
           <Route path="Admin-Department" element={<AdminDepartment />} />
         </Route>
         <Route path="/More-Discount" element={<MoreDiscount />} >
-          <Route path="Link1" element={<Link1 />} />
-          <Route path="Link2" element={<Link2 />} />
-          <Route path="Link3" element={<Link3 />} />
+          <Route path="Drink" element={<CategoryCartds />} />
+          <Route path="Milk" element={<CategoryCartds />} />
+          <Route path="Clearning" element={<CategoryCartds />} />
+          <Route path="Book" element={<CategoryCartds />} />
+          <Route path="Electronic" element={<CategoryCartds />} />
+          <Route path="Firing" element={<CategoryCartds />} />
+          <Route path="Cake" element={<CategoryCartds />} />
+          <Route path="Food" element={<CategoryCartds />} />
+          <Route path="Fruit" element={<CategoryCartds />} />
+          <Route path="Meat" element={<CategoryCartds />} />
           <Route />
         </Route>
       </Routes>

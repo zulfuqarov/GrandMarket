@@ -60,6 +60,11 @@ const AdminAddProduct = () => {
       console.log(res.data)
       if (res.status === 200) {
         setColor(true)
+        setInput({
+          Category: '',
+          Name: ''
+        })
+        setImage(null)
       }
       setTimeout(() => {
         setstatusError({
