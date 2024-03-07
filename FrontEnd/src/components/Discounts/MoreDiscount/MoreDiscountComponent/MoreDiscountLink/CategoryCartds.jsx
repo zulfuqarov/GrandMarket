@@ -25,19 +25,9 @@ import ImageGrid9 from '../../../../Home/img/ae716c_e0ec635e9b9d4c629c2aec352e9f
 
 const CategoryCartds = () => {
     const context = useContext(ContextGrand)
-    // const { id } = useParams()
-    // const [FilteringCategoryState, setFilteringCategoryState] = useState([])
-
-    // const FilteringLocat = () => {
-    //     const Filter = context.categoryState2.filter((onFilter) => {
-    //            onFilter.Category.toLowerCase().includes(id.toLowerCase())
-    //     })
-    // }
-
-// local filterlemeni yoxlayacaqdim !!!
 
     return (
-        <section className='container mx-auto'>
+        <section className='container mx-auto '>
             <div className=' h-full pt-[60px]'>
                 <Swiper
                     slidesPerView={1}
@@ -81,6 +71,14 @@ const CategoryCartds = () => {
                             </SwiperSlide>
                         ))
 
+                    }
+                    {
+                        context.allCategoryState &&
+                        context.allCategoryState.map((oneMap, index) => (
+                            <SwiperSlide key={index}>
+                                <img className='rounded-xl w-[280px] h-[280px]' src={oneMap.Img} alt="" />
+                            </SwiperSlide>
+                        ))
                     }
                     <SwiperSlide>
                         <img className='rounded-xl w-[280px]  h-[280px]' src={ImageGrid} alt="" />

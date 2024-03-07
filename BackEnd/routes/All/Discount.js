@@ -43,9 +43,11 @@ router.delete("/DiscountDelet/:id", async (req, res) => {
       _id: id,
     });
     if (!DeletingDiscount) {
-      res.status(400).json({ message: "Silme isleminde xeta bash verdi" });
+      return res
+        .status(400)
+        .json({ message: "Silme isleminde xeta bash verdi" });
     } else {
-      res.status(200).json({
+      return res.status(200).json({
         message: "Silme islemi ugurla tamamlandi",
         delete: DeletingDiscount,
       });
@@ -81,7 +83,9 @@ router.get("/Filter/:FilteringCategory", async (req, res) => {
     if (FilteringDiscount.length > 0) {
       res.status(200).json(FilteringDiscount);
     } else {
-      res.status(400).json({ message: "Axdardiginiz mehsul tapilmadi" });
+      res
+        .status(400)
+        .json({ message: "Axdardiginiz mehsul tapilmadi", DiscountFind });
     }
   } catch (error) {
     console.log(error);

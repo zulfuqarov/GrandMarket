@@ -9,39 +9,27 @@ export const ContextGrand = createContext()
 const ContextProvider = ({ children }) => {
 
     const [categoryState, setcategoryState] = useState([])
-    const [categoryState2, setcategoryState2] = useState([])
+    const [allCategoryState, setallCategoryState] = useState([])
 
     const FilteringCategory = async (id) => {
         try {
             const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/Filter/${id}`)
             // console.log(res.data)
             setcategoryState(res.data)
+            setallCategoryState([])
         } catch (error) {
             console.log(error)
+            // console.log(error.response.data.DiscountFind)
+            setallCategoryState(error.response.data.DiscountFind)
         }
     }
-
-    const FilteringCategory2 = async () => {
-        try {
-            const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/`)
-            // console.log(res.data)
-            setcategoryState2(res.data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-
-
-
 
     return (
         <ContextGrand.Provider
             value={{
                 FilteringCategory,
-                FilteringCategory2,
-                categoryState, 
-                categoryState2
+                allCategoryState,
+                categoryState
             }}
         >
             {children}
