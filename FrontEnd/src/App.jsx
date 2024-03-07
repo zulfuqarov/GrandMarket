@@ -14,6 +14,7 @@ import AdminAddProduct from './components/Admin/AdminComponent/AdminAddProduct'
 import AdminDepartment from './components/Admin/AdminComponent/AdminDepartment'
 import MoreDiscount from "./components/Discounts/MoreDiscount/MoreDiscount";
 import CategoryCartds from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/CategoryCartds'
+import ContextProvider from "./Context/ContextProvider";
 axios.defaults.withCredentials = true;
 
 // project template links
@@ -23,35 +24,38 @@ axios.defaults.withCredentials = true;
 function App() {
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Branches" element={<Branches />} />
-        <Route path="/Custome" element={<Custome />} />
-        <Route path="/Discounts" element={<Discounts />} />
-        <Route path="/Admin-Sign" element={<AdminSign />} />
-        <Route path="/Admin" element={<Admin />} >
-          <Route path="Admin-Product" element={<AdminAddProduct />} />
-          <Route path="Admin-Department" element={<AdminDepartment />} />
-        </Route>
-        <Route path="/More-Discount" element={<MoreDiscount />} >
-          <Route path="Drink" element={<CategoryCartds />} />
-          <Route path="Milk" element={<CategoryCartds />} />
-          <Route path="Clearning" element={<CategoryCartds />} />
-          <Route path="Book" element={<CategoryCartds />} />
-          <Route path="Electronic" element={<CategoryCartds />} />
-          <Route path="Firing" element={<CategoryCartds />} />
-          <Route path="Cake" element={<CategoryCartds />} />
-          <Route path="Food" element={<CategoryCartds />} />
-          <Route path="Fruit" element={<CategoryCartds />} />
-          <Route path="Meat" element={<CategoryCartds />} />
-          <Route />
-        </Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+
+    <ContextProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Branches" element={<Branches />} />
+          <Route path="/Custome" element={<Custome />} />
+          <Route path="/Discounts" element={<Discounts />} />
+          <Route path="/Admin-Sign" element={<AdminSign />} />
+          <Route path="/Admin" element={<Admin />} >
+            <Route path="Admin-Product" element={<AdminAddProduct />} />
+            <Route path="Admin-Department" element={<AdminDepartment />} />
+          </Route>
+          <Route path="/More-Discount" element={<MoreDiscount />} >
+            <Route path="Drink/:id" element={<CategoryCartds />} />
+            <Route path="Milk/:id" element={<CategoryCartds />} />
+            <Route path="Clearning/:id" element={<CategoryCartds />} />
+            <Route path="Book/:id" element={<CategoryCartds />} />
+            <Route path="Electronic/:id" element={<CategoryCartds />} />
+            <Route path="Firing/:id" element={<CategoryCartds />} />
+            <Route path="Cake/:id" element={<CategoryCartds />} />
+            <Route path="Food/:id" element={<CategoryCartds />} />
+            <Route path="Fruit/:id" element={<CategoryCartds />} />
+            <Route path="Meat/:id" element={<CategoryCartds />} />
+            <Route />
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </ContextProvider>
   )
 }
 

@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 
                 <div className='py-[15px] '>
-                  <p className='text-gray-400 font-light text-[17px] pb-[7px] max-[768px]:text-center'>Qaynar xətt: <i class="text-white ml-[5px] fa-solid fa-phone fa-shake"></i></p>
+                  <p className='text-gray-400 font-light text-[17px] pb-[7px] max-[768px]:text-center'>Qaynar xətt: <i className="text-white ml-[5px] fa-solid fa-phone fa-shake"></i></p>
                   <span className='text-[20px] text-white font-semibold'>(051) 255 51 55 <br />
                     info@grandmart.az</span>
                 </div>
@@ -38,10 +38,10 @@ const Footer = () => {
               </div>
 
               <div className='flex flex-row justify-between items-center w-[300px]  max-[991px]:pt-[30px]'>
-                <Link><i class="fa-brands fa-instagram text-red-300 text-[32px] max-[768px]:text-[20px]"></i></Link>
-                <Link><i class="fa-brands fa-facebook text-blue-700 text-[32px] max-[768px]:text-[20px]"></i></Link>
-                <Link><i class="fa-brands fa-linkedin text-blue-400 text-[32px] max-[768px]:text-[20px]"></i></Link>
-                <Link><i class="fa-brands fa-twitter text-blue-500 text-[32px] max-[768px]:text-[20px]"></i></Link>
+                <Link><i className="fa-brands fa-instagram text-red-300 text-[32px] max-[768px]:text-[20px]"></i></Link>
+                <Link><i className="fa-brands fa-facebook text-blue-700 text-[32px] max-[768px]:text-[20px]"></i></Link>
+                <Link><i className="fa-brands fa-linkedin text-blue-400 text-[32px] max-[768px]:text-[20px]"></i></Link>
+                <Link><i className="fa-brands fa-twitter text-blue-500 text-[32px] max-[768px]:text-[20px]"></i></Link>
               </div>
             </div>
           </div>
@@ -51,19 +51,19 @@ const Footer = () => {
                 <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Haqqımızda <i className="ml-[10px] text-[15px] fa-solid fa-info"></i></Link>
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Endirimlər  <i class="ml-[10px] text-[15px] fa-regular fa-circle-check"></i></Link>
+                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Endirimlər  <i className="ml-[10px] text-[15px] fa-regular fa-circle-check"></i></Link>
 
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Mağazalar <i class="ml-[10px] text-[15px] fa-solid fa-shop"></i></Link>
+                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Mağazalar <i className="ml-[10px] text-[15px] fa-solid fa-shop"></i></Link>
               </div>
             </div>
             <div className='flex flex-row justify-around items-center w-[40%] max-[768px]:w-[60%] max-[768px]:pt-[20px]'>
               <div>
-                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Xəbərlər <i class="ml-[10px] text-[15px] fa-regular fa-newspaper"></i></Link>
+                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Xəbərlər <i className="ml-[10px] text-[15px] fa-regular fa-newspaper"></i></Link>
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Ana Səhifə <i class="ml-[10px] text-[15px] fa-solid fa-house"></i></Link>
+                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Ana Səhifə <i className="ml-[10px] text-[15px] fa-solid fa-house"></i></Link>
               </div>
             </div>
           </div>

@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
-import ButtonPromps from '../../../../PrompsComponent/Button'
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
 // Import Swiper React components
+import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { ContextGrand } from '../../../../../Context/ContextProvider'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/grid';
@@ -25,19 +24,31 @@ import ImageGrid8 from '../../../../Home/img/ae716c_b1b0d0290f6540488584b3b776fb
 import ImageGrid9 from '../../../../Home/img/ae716c_e0ec635e9b9d4c629c2aec352e9f28e6~mv2.webp'
 
 const CategoryCartds = () => {
+    const context = useContext(ContextGrand)
+    // const { id } = useParams()
+    // const [FilteringCategoryState, setFilteringCategoryState] = useState([])
+
+    // const FilteringLocat = () => {
+    //     const Filter = context.categoryState2.filter((onFilter) => {
+    //            onFilter.Category.toLowerCase().includes(id.toLowerCase())
+    //     })
+    // }
+
+// local filterlemeni yoxlayacaqdim !!!
+
     return (
         <section className='container mx-auto'>
-            <div className=' h-full'>
+            <div className=' h-full pt-[60px]'>
                 <Swiper
                     slidesPerView={1}
                     grid={{
                         rows: 2,
                         fill: "row",
                     }}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // }}
                     spaceBetween={30}
                     breakpoints={{
                         640: {
@@ -62,47 +73,56 @@ const CategoryCartds = () => {
                     modules={[Grid, Pagination, Autoplay]}
                     className="mySwiper"
                 >
+                    {
+                        context.categoryState &&
+                        context.categoryState.map((oneMap, index) => (
+                            <SwiperSlide key={index}>
+                                <img className='rounded-xl w-[280px] h-[280px]' src={oneMap.Img} alt="" />
+                            </SwiperSlide>
+                        ))
+
+                    }
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid} alt="" />
+                        <img className='rounded-xl w-[280px]  h-[280px]' src={ImageGrid} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl  w-[280px]' src={ImageGrid} alt="" />
+                        <img className='rounded-xl  w-[280px]  h-[280px]' src={ImageGrid} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid2} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid2} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid3} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid3} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid4} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid4} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid5} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid5} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid6} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid6} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid7} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid7} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid8} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid8} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid9} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid9} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid3} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid3} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid5} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid5} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid6} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid6} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='rounded-xl w-[280px]' src={ImageGrid7} alt="" />
+                        <img className='rounded-xl w-[280px] h-[280px]' src={ImageGrid7} alt="" />
                     </SwiperSlide>
                 </Swiper>
             </div>

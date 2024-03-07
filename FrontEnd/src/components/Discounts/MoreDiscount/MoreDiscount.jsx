@@ -4,7 +4,7 @@ import MoreDiscountCategoryMenu from './MoreDiscountComponent/MoreDiscountCatego
 
 const MoreDiscount = () => {
     return (
-        <section>
+        <section >
             <div>
                 <MoreDiscountHeader />
             </div>
