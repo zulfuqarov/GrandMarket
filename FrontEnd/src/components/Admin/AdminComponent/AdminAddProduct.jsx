@@ -27,7 +27,9 @@ const AdminAddProduct = () => {
   const [Image, setImage] = useState(null)
   const [Input, setInput] = useState({
     Category: '',
-    Name: ''
+    Name: '',
+    Price: '',
+    OldPrice: ''
   })
 
   const handleChangeInputs = (e) => {
@@ -56,13 +58,17 @@ const AdminAddProduct = () => {
       fileUpload.append('image', Image)
       fileUpload.append('Name', Input.Name)
       fileUpload.append('Category', Input.Category)
+      fileUpload.append('Price', Input.Price)
+      fileUpload.append('OldPrice', Input.OldPrice)
       const res = await axios.post(`${env.REACT_APP_BACKEND_HOST}/Discount/DiscountPost`, fileUpload)
       console.log(res.data)
       if (res.status === 200) {
         setColor(true)
         setInput({
           Category: '',
-          Name: ''
+          Name: '',
+          Price: '',
+          OldPrice: ''
         })
         setImage(null)
       }
@@ -120,6 +126,24 @@ const AdminAddProduct = () => {
               value={Input.Name}
               size="lg"
               name='Name'
+            ></TEInput>
+            <TEInput
+              type="number"
+              label="*Endirim Qiymət"
+              className="mb-6"
+              onChange={handleChangeInputs}
+              value={Input.Price}
+              size="lg"
+              name='Price'
+            ></TEInput>
+            <TEInput
+              type="number"
+              label="*Köhnə Qiymət"
+              className="mb-6"
+              onChange={handleChangeInputs}
+              value={Input.OldPrice}
+              size="lg"
+              name='OldPrice'
             ></TEInput>
             <TESelect
               size="lg"

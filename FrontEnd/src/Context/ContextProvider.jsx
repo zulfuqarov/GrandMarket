@@ -10,26 +10,34 @@ const ContextProvider = ({ children }) => {
 
     const [categoryState, setcategoryState] = useState([])
     const [allCategoryState, setallCategoryState] = useState([])
+    const [categoryStateError, setcategoryStateError] = useState(null)
 
-    const FilteringCategory = async (id) => {
+    const FilteringCategory = async (id, pathName) => {
         try {
-            const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/Filter/${id}`)
-            // console.log(res.data)
-            setcategoryState(res.data)
-            setallCategoryState([])
+            if (pathName === "/More-Discount") {
+                const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/`)
+                setallCategoryState(res.data)
+            } else {
+                const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/Filter/${id}`)
+                setcategoryStateError(false)
+                setcategoryState(res.data)
+                setallCategoryState([])
+            }
         } catch (error) {
             console.log(error)
-            // console.log(error.response.data.DiscountFind)
-            setallCategoryState(error.response.data.DiscountFind)
+            setcategoryStateError(true)
+            setcategoryState([])
         }
     }
+
 
     return (
         <ContextGrand.Provider
             value={{
                 FilteringCategory,
                 allCategoryState,
-                categoryState
+                categoryState,
+                categoryStateError
             }}
         >
             {children}

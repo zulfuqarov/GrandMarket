@@ -15,6 +15,7 @@ import AdminDepartment from './components/Admin/AdminComponent/AdminDepartment'
 import MoreDiscount from "./components/Discounts/MoreDiscount/MoreDiscount";
 import CategoryCartds from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/CategoryCartds'
 import ContextProvider from "./Context/ContextProvider";
+import AdminAddProductCatalog from "./components/Admin/AdminComponent/AdminAddProductCatalog";
 axios.defaults.withCredentials = true;
 
 // project template links
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Admin" element={<Admin />} >
             <Route path="Admin-Product" element={<AdminAddProduct />} />
             <Route path="Admin-Department" element={<AdminDepartment />} />
+            <Route path="Admin-ProductCatalogImg" element={<AdminAddProductCatalog />} />
           </Route>
           <Route path="/More-Discount" element={<MoreDiscount />} >
             <Route path="Drink/:id" element={<CategoryCartds />} />

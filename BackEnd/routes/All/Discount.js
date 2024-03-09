@@ -10,7 +10,13 @@ router.post("/DiscountPost", async (req, res) => {
   const ImageFolder = req.files.image.tempFilePath;
   const body = req.body;
   try {
-    if (body.Category && body.Name && ImageFolder) {
+    if (
+      body.Category &&
+      body.Name &&
+      body.Price &&
+      body.OldPrice &&
+      ImageFolder
+    ) {
       const result = await cloudinary.uploader.upload(ImageFolder, {
         use_filename: true,
         folder: "Home",
@@ -20,6 +26,8 @@ router.post("/DiscountPost", async (req, res) => {
         Category: body.Category,
         Name: body.Name,
         Img: result.url,
+        Price: body.Price,
+        OldPrice: body.OldPrice,
       });
       await newDiscount.save();
 
@@ -85,7 +93,7 @@ router.get("/Filter/:FilteringCategory", async (req, res) => {
     } else {
       res
         .status(400)
-        .json({ message: "Axdardiginiz mehsul tapilmadi", DiscountFind });
+        .json({ message: "Axdardiginiz mehsul tapilmadi",});
     }
   } catch (error) {
     console.log(error);

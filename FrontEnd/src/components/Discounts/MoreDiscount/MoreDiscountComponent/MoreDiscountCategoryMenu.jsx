@@ -10,8 +10,10 @@ const MoreDiscountCategoryMenu = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        context.FilteringCategory(id)
+        context.FilteringCategory(id,pathname)
     }, [id])
+
+    
 
     return (
         <div>
@@ -26,7 +28,7 @@ const MoreDiscountCategoryMenu = () => {
                         </div>
                         <div className="bg-white w-full  rounded-md">
 
-                            <h1 className="text-center text-xl my-4  bg-blue-500 py-2 rounded-md border-b-2 cursor-pointer  text-white">Kateqoriyalar</h1>
+                            <h1 className="text-center text-xl my-4  bg-blue-500 py-2 rounded-md border-b-2 cursor-pointer  text-white">Bütün Kateqoriyalar</h1>
                             <div className="bg-white rounded-md list-none  text-center ">
                                 <li className="py-3 border-b-2"><Link to="Drink/İçki" className="list-none  hover:text-indigo-600">İçki</Link></li>
                                 <li className="py-3 border-b-2"><Link to="Milk/Süd,Səhər yeməyi" className="list-none  hover:text-indigo-600">Süd,Səhər yeməyi</Link></li>
