@@ -71,7 +71,13 @@ router.delete("/DiscountDelet/:id", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const GetDiscount = await Discount.find();
-    res.status(200).json(GetDiscount);
+    if (GetDiscount.length > 0) {
+      res.status(200).json(GetDiscount);
+    } else {
+      return res
+        .status(400)
+        .json({ message: "Get isdeyinde xeta bash verdi (Server)" });
+    }
   } catch (error) {
     console.log(error);
     res.status(400).json({ message: "Discount Get isdeyinde xeta bash verdi" });
@@ -91,9 +97,7 @@ router.get("/Filter/:FilteringCategory", async (req, res) => {
     if (FilteringDiscount.length > 0) {
       res.status(200).json(FilteringDiscount);
     } else {
-      res
-        .status(400)
-        .json({ message: "Axdardiginiz mehsul tapilmadi",});
+      res.status(400).json({ message: "Axdardiginiz mehsul tapilmadi" });
     }
   } catch (error) {
     console.log(error);

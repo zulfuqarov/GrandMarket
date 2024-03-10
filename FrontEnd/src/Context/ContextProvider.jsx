@@ -16,7 +16,9 @@ const ContextProvider = ({ children }) => {
         try {
             if (pathName === "/More-Discount") {
                 const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/`)
+                setcategoryStateError(false)
                 setallCategoryState(res.data)
+                setcategoryState([])
             } else {
                 const res = await axios.get(`${env.REACT_APP_BACKEND_HOST}/Discount/Filter/${id}`)
                 setcategoryStateError(false)
