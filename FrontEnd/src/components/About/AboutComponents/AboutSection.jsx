@@ -8,16 +8,17 @@ import Paper from '../img/SectionPaper.png'
 const AboutSection = () => {
     return (
         <div className='container mx-auto'>
-            <section className='pt-[80px] flex flex-row    max-[768px]:flex-col '>
-                <div className='basis-3/6 flex justify-center items-center'>
-                    <img className='w-[350px] h-[350px] rounded-xl' src={Paper} alt="" />
+            <section className='pt-[80px]'>
+                <div className='grid grid-cols-3 max-[991px]:grid-cols-1'>
+                    <div className="flex items-center justify-center text-[36px] text-blue-500 font-semibold max-[991px]:pt-[50px] "><p><i className="fa-solid fa-person-arrow-up-from-line pr-[20px] text-[32px] text-blue-300"></i>Populyarıq</p></div>
+                    <div className="flex items-center justify-center text-[36px] text-blue-500 font-semibold max-[991px]:pt-[50px] "><p><i className="fa-solid fa-hand-holding pr-[20px] text-[32px] text-blue-300"></i>Əlçatanıq</p></div>
+                    <div className="flex items-center justify-center text-[36px] text-blue-500 font-semibold max-[991px]:pt-[50px] "><p><i className="fa-solid fa-person-circle-check  pr-[20px] text-[32px] text-blue-300"></i>Etibarlıyıq</p></div>
                 </div>
-                <div className='basis-3/6  max-[768px]:basis-1'>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>Azərbaycan pərakəndə bazarında 20 ilə yaxındır fəaliyyət göstərən Grandmart supermarketlər şəbəkəsi hazırda 30-dan yuxarı filialla müştərilərin ixtiyarındadır.</p>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>Paytaxt Bakı şəhərində ilk filialı ilə fəaliyyətə başlayan Grandmart supermarketlər şəbəkəsi bununla yanaşı ölkənin digər regionlarında da filial açılışlarını gerçəkləşdirmişdir.</p>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>Qeyd edək ki, supermarketlər şəbəkəsi 40 mindən çox məhsul çeşidinin satışını həyata keçirir. Grandmart Supermarketlər Şəbəkəsində hazırda 1500-ə yaxın əməkdaş çalışmaqdadır.</p>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>Paytaxt Bakı şəhərində 5000 kv. m. ərazidə yerləşən mərkəzi anbar soyutma-isitmə sistemləri və yük maşınları ilə təmin olunmuşdur.</p>
+                <div className='grid grid-cols-2 pt-[50px] max-[991px]:grid-cols-1'>
+                    <div className="flex items-center justify-center  text-[36px] text-blue-500 font-semibold"><p><i className="fa-solid fa-star pr-[20px] text-[32px] text-blue-300"></i>Liderik</p></div>
+                    <div className="flex items-center justify-center text-[36px] text-blue-500 font-semibold max-[991px]:pt-[50px]"><p><i className="fa-solid fa-thumbs-up pr-[20px] text-[32px] text-blue-300"></i>Rahatıq</p></div>
                 </div>
+                <div className="pt-[50px] flex items-center justify-center text-[36px] text-blue-500 font-semibold"><p><i className="fa-solid fa-flag pr-[20px] text-[32px] text-blue-300"></i>Yerli/Azərbaycanlıyıq</p></div>
             </section>
         </div>
     )

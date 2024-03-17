@@ -5,13 +5,27 @@ import Paper from '../img/Neutral Brown Simple Torn Paper News Announcement Inst
 const AboutMission = () => {
     return (
         <div className='container mx-auto'>
-            <section className='pt-[80px] flex flex-row    max-[768px]:flex-col '>
-                <div className='basis-3/6 flex justify-center items-center'>
-                    <img className='w-[350px] h-[350px] rounded-xl' src={Paper} alt="" />
+            <section className='pt-[80px]  grid grid-cols-3 gap-4 max-[1024px]:grid-cols-2  max-[768px]:grid-cols-1 '>
+                <div className='bg-black rounded-lg p-[50px] h-[450px] max-[1280px]:h-[500px]  max-[768px]:h-[300px]'>
+                    <h1 className='text-[22px] font-semibold text-blue-500 tracking-normal	pb-[35px]'>Komfortlu alış-veriş üçün hər şərait</h1>
+                    <li className='text-[17px] text-gray-400 font-normal'>İnnovativ mağaza dizaynı</li>
+                    <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Sıralar arasında genişlik</li>
+                    <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Problemsiz alış-veriş üçün müasir və geniş kassalar</li>
                 </div>
-                <div className='basis-3/6  max-[768px]:basis-1'>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>2021-ci il 9 aprel tarixində Qazaxıstanın Aktau şəhərində açılışı gerçəkləşən Grandmart supermarket ölkə sərhədlərindən kənarda fəaliyyət göstərən ilk pərakəndə markası olaraq bilinməkdədir</p>
-                    <p className='w-full mt-[20px] max-[1024px]:text-[16px] max-[768px]:text-center text-[18px] font-semibold '>3000 kv. m-lik sahədə yerləşən Aktau filialı həmçinin şəhərin ən böyük supermarketi ünvanını daşımaqdadır.</p>
+                <div className='bg-black rounded-lg p-[50px] h-[450px] max-[1280px]:h-[500px]  max-[768px]:h-[300px]'>
+                    <h1 className='text-[22px] font-semibold text-blue-500 tracking-normal	pb-[35px]'>Mağaza standartlarında mükəmməllik</h1>
+                    <li className='text-[17px] text-gray-400 font-normal'>Ən yüksək keyfiyyət və təravətə malik məhsulların təsirli görünüşləri</li>
+                    <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Müştərilər üçün rahat sərgilənmiş daim yenilənən zəngin çeşid</li>
+                    <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Qida təhlükəsizliyinə və gigiyenaya zəmanət</li>
+                    <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Aydın promo və qiymət siyasəti</li>
+                </div>
+
+                <div className='max-[1024px]:col-span-full mx-auto max-[768px]:col-span-1 max-[768px]:mx-0'>
+                    <div className='bg-black rounded-lg p-[50px] h-[450px] max-[1280px]:h-[300px] '>
+                        <h1 className='text-[22px] font-semibold text-blue-500 tracking-normal	pb-[35px]'>Qüsursuz xidmət</h1>
+                        <li className='text-[17px] text-gray-400 font-normal'>Mükəmməl xidmət üçün təlimli və təcrübəli işçi heyəti</li>
+                        <li className='pt-[10px] text-[17px] text-gray-400 font-normal'>Həmişə canla-başla xidmət</li>
+                    </div>
                 </div>
 
             </section>
