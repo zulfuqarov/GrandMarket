@@ -5,16 +5,20 @@ import AboutCompany from './AboutComponents/AboutCompany'
 import AboutPartners from './AboutComponents/AboutPartners'
 import AboutMission from './AboutComponents/AboutMission'
 import AboutParalax from './AboutComponents/AboutParalax'
+import AboutSectionmg from './AboutComponents/AboutSectionmg'
+import AboutCorporative from './AboutComponents/AboutCorporative'
 
 const About = () => {
   return (
     <div>
       <AboutHeader />
+      <AboutSectionmg />
       <AboutSection />
-      {/* <AboutParalax /> */}
-      <AboutPartners />\
-      <AboutCompany />
       <AboutMission />
+      <AboutCompany />
+      {/* <AboutParalax /> */}
+      <AboutPartners />
+      <AboutCorporative />
     </div>
   )
 }

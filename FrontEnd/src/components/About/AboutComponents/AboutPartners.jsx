@@ -81,52 +81,11 @@ const AboutPartners = () => {
                                                 <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
                                             </div>
                                         </div>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img src="https://www.windsystemsmag.com/wp-content/uploads/Images/Articles/2015-Dec/1215-QA.jpg" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img src="https://www.windsystemsmag.com/wp-content/uploads/Images/Articles/2015-Dec/1215-QA.jpg" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img src="https://www.windsystemsmag.com/wp-content/uploads/Images/Articles/2015-Dec/1215-QA.jpg" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </animated.div>
                                 : <animated.div style={fade2}>
                                     <div className='grid grid-cols-3 max-[991px]:grid-cols-2 max-[768px]:grid-cols-1 gap-4'>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img className='mx-auto w-[192px] h-[218px]' src="https://techprofile.blob.core.windows.net/images/5eB6Nz9xzUytChNVfJTYRA.png?8D981F" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img className='mx-auto w-[192px] h-[218px]' src="https://techprofile.blob.core.windows.net/images/5eB6Nz9xzUytChNVfJTYRA.png?8D981F" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
-                                        <div className='flex flex-col justify-center items-center'>
-                                            <img className='mx-auto w-[192px] h-[218px]' src="https://techprofile.blob.core.windows.net/images/5eB6Nz9xzUytChNVfJTYRA.png?8D981F" alt="" />
-                                            <div className='flex flex-col justify-center items-center py-[10px]'>
-                                                <p className='text-[23px] text-blue-500 font-extrabold'>Nəbi Zülfüqarov</p>
-                                                <span className='text-[17px] text-black font-bold' >Malliyə direktoru</span>
-                                            </div>
-                                        </div>
                                         <div className='flex flex-col justify-center items-center'>
                                             <img className='mx-auto w-[192px] h-[218px]' src="https://techprofile.blob.core.windows.net/images/5eB6Nz9xzUytChNVfJTYRA.png?8D981F" alt="" />
                                             <div className='flex flex-col justify-center items-center py-[10px]'>
