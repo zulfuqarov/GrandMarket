@@ -34,7 +34,7 @@ const AdminSign = () => {
 
     return (
         <header>
-            <section className="bg-gray-50 dark:bg-gray-900 h-[130vh] pt-[70px]">
+            <section className="bg-gray-50 dark:bg-gray-900 h-[130vh] pt-[80px]">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                     <Link
                         to="#"

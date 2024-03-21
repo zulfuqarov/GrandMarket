@@ -4,7 +4,7 @@ import BranchesMap from './BranchesComponent/BranchesMap'
 
 const Branches = () => {
     return (
-        <div>
+        <div className='pt-[80px]'>
             <BranchesHeader />
             <BranchesMap />
         </div>

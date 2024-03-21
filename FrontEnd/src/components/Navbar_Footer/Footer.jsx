@@ -48,22 +48,22 @@ const Footer = () => {
           <div className='flex  flex-row justify-center max-[768px]:flex-col items-center  pt-[20px]'>
             <div className='flex flex-row justify-around items-center w-[60%] max-[768px]:w-[95%]'>
               <div>
-                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Haqqımızda <i className="ml-[10px] text-[15px] fa-solid fa-info"></i></Link>
+                <Link to='/About' className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Haqqımızda <i className="ml-[10px] text-[15px] fa-solid fa-info"></i></Link>
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Endirimlər  <i className="ml-[10px] text-[15px] fa-regular fa-circle-check"></i></Link>
+                <Link to="/More-Discount" className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Endirimlər  <i className="ml-[10px] text-[15px] fa-regular fa-circle-check"></i></Link>
 
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Mağazalar <i className="ml-[10px] text-[15px] fa-solid fa-shop"></i></Link>
+                <Link to="/Branches" className='text-gray-500 text-[18px]  max-[768px]:text-[17px] hover:text-white transition-all'>Filiallar <i className="ml-[10px] text-[15px] fa-solid fa-shop"></i></Link>
               </div>
             </div>
             <div className='flex flex-row justify-around items-center w-[40%] max-[768px]:w-[60%] max-[768px]:pt-[20px]'>
               <div>
-                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Xəbərlər <i className="ml-[10px] text-[15px] fa-regular fa-newspaper"></i></Link>
+                <Link to='/Custome' className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Müştərilər <i className="ml-[10px] text-[15px] fa-regular fa-newspaper"></i></Link>
               </div>
               <div>
-                <Link className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Ana Səhifə <i className="ml-[10px] text-[15px] fa-solid fa-house"></i></Link>
+                <Link to="/" className='text-gray-500 text-[18px] max-[768px]:text-[17px] hover:text-white transition-all'>Ana Səhifə <i className="ml-[10px] text-[15px] fa-solid fa-house"></i></Link>
               </div>
             </div>
           </div>

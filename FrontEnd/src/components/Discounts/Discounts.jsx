@@ -4,7 +4,7 @@ import DiscountsHeader from './DiscountsComponents/DiscountsHeader'
 
 const Discounts = () => {
     return (
-        <div>
+        <div className='pt-[80px]'>
             <DiscountsHeader />
             <DiscountsCarts />
         </div>

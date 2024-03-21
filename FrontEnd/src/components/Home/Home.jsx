@@ -8,7 +8,7 @@ import HomeCountr from './HomeComponent/HomeCountr'
 
 const Home = () => {
   return (
-    <div>
+    <div className='pt-[90px]'>
       <HomeSection />
       <HomeImages />
       <HomeAbout />

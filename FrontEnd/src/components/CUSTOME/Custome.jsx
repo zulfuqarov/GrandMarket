@@ -5,7 +5,7 @@ import CustomeAnket from './CustomeComponents/CustomeAnket'
 
 const Custome = () => {
     return (
-        <div>
+        <div className='pt-[80px]'>
             <CustomeHeader />
             <CustomeAccardion />
             <CustomeAnket/>

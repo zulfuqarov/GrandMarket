@@ -6,7 +6,7 @@ const HomeSection = () => {
         <section >
             <div className='w-[100%] h-[200px] rounded-md flex flex-col justify-center items-center'>
                 <h1 className='text-[34px] text-black font-extrabold'>ÜSTÜN XİDMƏT</h1>
-                <p className='text-[22px] text-black font-semibold pt-[15px]'>GRANDMART Supermarketlər Şəbəkəsi</p>
+                <p className='text-[22px] text-black font-semibold pt-[15px] max-[768px]:w-[310px]'>GRANDMART Supermarketlər Şəbəkəsi</p>
             </div>
             <div className='container mx-auto'>
                 <div className='flex flex-row space-x-5 max-[768px]:flex-col max-[768px]:space-x-0 pt-[80px]'>

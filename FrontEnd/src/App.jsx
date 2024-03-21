@@ -16,10 +16,9 @@ import MoreDiscount from "./components/Discounts/MoreDiscount/MoreDiscount";
 import CategoryCartds from './components/Discounts/MoreDiscount/MoreDiscountComponent/MoreDiscountLink/CategoryCartds'
 import ContextProvider from "./Context/ContextProvider";
 import AdminAddProductCatalog from "./components/Admin/AdminComponent/AdminAddProductCatalog";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 axios.defaults.withCredentials = true;
 
-// project template links
-// http://preview.themeforest.net/item/veggie-supermarket-professional-html-template/full_screen_preview/12406095?_ga=2.234528094.1571227709.1707320525-2062948680.1705790704
 
 
 function App() {
@@ -28,6 +27,7 @@ function App() {
 
     <ContextProvider>
       <BrowserRouter>
+        <ScrollTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

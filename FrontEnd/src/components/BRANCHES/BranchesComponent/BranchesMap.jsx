@@ -52,7 +52,7 @@ const BranchesMap = () => {
         <section className='pt-[80px]'>
 
             {isLoaded ?
-                <div className='relative'>
+                <div className='relative max-[768px]:static'>
                     <div className='h-[100%]'>
                         <GoogleMap
                             mapContainerStyle={containerStyle}
@@ -81,7 +81,7 @@ const BranchesMap = () => {
                             )}
                         </GoogleMap>
                     </div>
-                    <div className='overflow-y-auto pb-[20px] w-[450px] h-[700px] flex flex-col items-center bg-white absolute top-[10%] left-[2%] rounded-xl'>
+                    <div className='overflow-y-auto pb-[20px] w-[450px] h-[700px] max-[768px]:mt-[60px] max-[768px]:w-full max-[768px]:left-0 max-[768px]:static  flex flex-col  items-center bg-white absolute top-[10%] left-[2%] rounded-xl'>
                         {/* map Search Input start */}
                         <div className="mb-3 pt-[20px] md:w-96">
                             <div className="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -89,7 +89,7 @@ const BranchesMap = () => {
                                     onChange={HandleChangeSerach}
                                     value={Search}
                                     type="search"
-                                    className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                    className="relative m-0 -mr-0.5 block max-[768px]:w-full  flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                                     placeholder="Search"
                                     aria-label="Search"
                                     aria-describedby="button-addon1" />
@@ -133,7 +133,7 @@ const BranchesMap = () => {
                     </div>
                 </div>
             }
-            
+
         </section >
     );
 };

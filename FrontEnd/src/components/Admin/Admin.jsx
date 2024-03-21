@@ -43,7 +43,7 @@ const Admin = () => {
         )
     } else {
         return (
-            <section>
+            <section className='pt-[80px]'>
                 <AdminHeader />
                 <AdminLogout />
                 <div className='mx-auto container'>

@@ -10,7 +10,7 @@ import AboutCorporative from './AboutComponents/AboutCorporative'
 
 const About = () => {
   return (
-    <div>
+    <div className='pt-[80px]'>
       <AboutHeader />
       <AboutSectionmg />
       <AboutSection />

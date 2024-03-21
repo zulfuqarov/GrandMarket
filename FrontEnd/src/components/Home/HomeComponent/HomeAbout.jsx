@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonPromps from '../../../components/PrompsComponent/Button'
+import { Link } from 'react-router-dom'
 const HomeAbout = () => {
     return (
         <div className='container mx-auto pt-[80px]'>
@@ -54,7 +55,7 @@ const HomeAbout = () => {
                     </p>
                 </div>
                 <div className='basis-3/6 pt-[30px]'>
-                    <ButtonPromps ButtonName='FİLİALLARIMIZ' />
+                    <Link to="/Branches"><ButtonPromps ButtonName='FİLİALLARIMIZ' /></Link>
                 </div>
             </div>
         </div>
