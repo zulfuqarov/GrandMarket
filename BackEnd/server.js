@@ -12,7 +12,7 @@ import AllRoutes from "./routes/AllRoutes.js";
 
 // import corsOptions start
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "*",
   credentials: true,
 };
 // import corsOptions end
