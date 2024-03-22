@@ -5,7 +5,7 @@ const MobileNavbar = ({ OpenMobileNavbar }) => {
     const url = useLocation()
 
     return (
-        <div className='w-full h-[100vh] top-0 bg-white z-10 fixed overflow-y-scroll overflow-x-hidden'>
+        <div className='w-full h-[100vh] top-0 bg-white z-10 fixed  overflow-hidden '>
             <div className='flex justify-between items-center pt-[20px]'>
                 <div>
                     <Link to="" className="border flex-shrink-0 flex items-center justify-center px-4 lg:px-6 xl:px-8">
@@ -16,7 +16,7 @@ const MobileNavbar = ({ OpenMobileNavbar }) => {
                     <i onClick={OpenMobileNavbar} className="fa-solid fa-xmark pr-[30px] text-[32px] cursor-pointer"></i>
                 </div>
             </div>
-            <div className='flex flex-col h-full '>
+            <div className='flex flex-col h-[70%] '>
                 <ul className="flex flex-col items-center w-full h-full justify-around  ml-4 xl:ml-8 mr-auto">
                     <li className={`p-3 xl:p-6  ${url.pathname === '/' ? 'text-blue-600' : ''}`}>
                         <Link to="/">

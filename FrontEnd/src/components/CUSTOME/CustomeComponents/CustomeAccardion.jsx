@@ -19,12 +19,12 @@ const CustomeAccardion = () => {
             <section className="pt-[80px]">
 
                 <div id="accordionExample">
-                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-white">
                         <h2 className="mb-0" id="headingOne">
                             <button
                                 className={`font-bold !text-gray-400 ${activeElement === "element1" &&
                                     `!text-black text- [box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:!text-primary-400 dark:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]`
-                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white`}
+                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-white dark:text-white`}
                                 type="button"
                                 onClick={() => handleClick("element1")}
                                 aria-expanded="true"
@@ -66,13 +66,13 @@ const CustomeAccardion = () => {
                         </TECollapse>
                     </div>
                 </div>
-                <div className="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                <div className="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-white">
                     <h2 className="mb-0" id="headingTwo">
                         <button
                             className={`font-bold !text-gray-400 ${activeElement === "element2"
                                 ? `!text-black [box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:!text-primary-400 dark:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]`
                                 : `transition-none rounded-b-[15px]`
-                                } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white`}
+                                } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-white dark:text-white`}
                             type="button"
                             onClick={() => handleClick("element2")}
                             aria-expanded="true"
@@ -111,13 +111,13 @@ const CustomeAccardion = () => {
                         </div>
                     </TECollapse>
                 </div>
-                <div className="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                <div className="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-white">
                     <h2 className="accordion-header mb-0" id="headingThree">
                         <button
                             className={`font-bold !text-gray-400 ${activeElement === "element3"
                                 ? `!text-black [box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:!text-primary-400 dark:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]`
                                 : `transition-none rounded-b-[15px]`
-                                } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white`}
+                                } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-white dark:text-white`}
                             type="button"
                             onClick={() => handleClick("element3")}
                             aria-expanded="true"
@@ -157,12 +157,12 @@ const CustomeAccardion = () => {
                     </TECollapse>
                 </div>
                 <div id="accordionExample">
-                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-white">
                         <h2 className="mb-0" id="headingOne">
                             <button
                                 className={`font-bold !text-gray-400 ${activeElement === "element4" &&
                                     `!text-black text- [box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:!text-primary-400 dark:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]`
-                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white`}
+                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-white dark:text-white`}
                                 type="button"
                                 onClick={() => handleClick("element4")}
                                 aria-expanded="true"
@@ -214,12 +214,12 @@ inline-block !pb-[10px]">Şikayətlərə vaxtında baxılma hüququ
                     </div>
                 </div>
                 <div id="accordionExample">
-                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+                    <div className="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-white">
                         <h2 className="mb-0" id="headingOne">
                             <button
                                 className={`font-bold !text-gray-400 ${activeElement === "element5" &&
                                     `!text-black text- [box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:!text-primary-400 dark:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]`
-                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white`}
+                                    } group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-white dark:text-white`}
                                 type="button"
                                 onClick={() => handleClick("element5")}
                                 aria-expanded="true"

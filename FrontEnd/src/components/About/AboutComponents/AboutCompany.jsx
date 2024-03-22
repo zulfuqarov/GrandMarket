@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 const AboutCompany = () => {
     return (
         <section className='pt-[80px]'>
-            <h1 className='text-[38px] text-center font-semibold'>
+             <h1 className='text-[38px] text-center font-semibold max-[768px]:text-[28px]'>
                 PARTNYORLARIMIZ
             </h1>
 

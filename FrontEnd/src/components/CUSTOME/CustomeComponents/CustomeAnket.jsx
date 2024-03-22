@@ -139,7 +139,7 @@ const CustomeAnket = () => {
 
             <div className='flex flex-row pt-[60px] max-[911px]:items-center max-[911px]:flex-col'>
                 <div className='basis-3/6  ml-[30px] max-[911px]:ml-[0px]'>
-                    <div className="block max-w-sm rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div className="block max-w-sm rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-white">
                         <form onSubmit={FormOnSubmit}>
                             {/* <!--Name input--> */}
                             <TEInput
