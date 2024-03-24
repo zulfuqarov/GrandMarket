@@ -17,7 +17,8 @@ import CategoryCartds from './components/Discounts/MoreDiscount/MoreDiscountComp
 import ContextProvider from "./Context/ContextProvider";
 import AdminAddProductCatalog from "./components/Admin/AdminComponent/AdminAddProductCatalog";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
-axios.defaults.withCredentials = true;
+
+// axios.defaults.withCredentials = true;
 
 
 
