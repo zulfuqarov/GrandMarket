@@ -98,7 +98,7 @@ const BranchesMap = () => {
                         {/* map Search Input end */}
 
                         {
-                            FilterMarkers(Search).length > 0 ?
+                            FilterMarkers(Search).length > 0 ? 
                                 (
                                     FilterMarkers(Search).map((oneMarker, index) => (
                                         <button key={index} onClick={(e) => handleMarkerClick(e, oneMarker)} className='w-[95%] text-left mt-[30px]'>

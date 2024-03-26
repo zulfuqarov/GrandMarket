@@ -8,7 +8,7 @@ const MoreDiscountCategoryMenu = () => {
     const CategoryFilterLinks = [
         {
             to: "Drink/İçki",
-            name: "İçki"
+            name: "Sular"
         },
         {
             to: "Milk/Süd,Səhər yeməyi",
@@ -52,7 +52,6 @@ const MoreDiscountCategoryMenu = () => {
     const { pathname } = useLocation()
     const { id } = useParams()
 
-    const [ChangeInputs, setChangeInputs] = useState('')
 
     const handleChangeInputs = (e) => {
         FilteringCategoryLinks()
@@ -61,7 +60,7 @@ const MoreDiscountCategoryMenu = () => {
 
     const FilteringCategoryLinks = () => {
         const Filter = CategoryFilterLinks.filter((oneFilter) => {
-            return oneFilter.name.toLowerCase().includes(context.ChangeInputs.toLowerCase())
+            return oneFilter.name.toLowerCase().trim().includes(context.ChangeInputs.toLowerCase().trim())
         })
         return Filter
     }
