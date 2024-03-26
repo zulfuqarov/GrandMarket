@@ -11,6 +11,7 @@ const ContextProvider = ({ children }) => {
     const [categoryState, setcategoryState] = useState([])
     const [allCategoryState, setallCategoryState] = useState([])
     const [categoryStateError, setcategoryStateError] = useState(null)
+    const [ChangeInputs, setChangeInputs] = useState('')
 
     const FilteringCategory = async (id, pathName) => {
         try {
@@ -39,7 +40,9 @@ const ContextProvider = ({ children }) => {
                 FilteringCategory,
                 allCategoryState,
                 categoryState,
-                categoryStateError
+                categoryStateError,
+                setChangeInputs,
+                ChangeInputs
             }}
         >
             {children}

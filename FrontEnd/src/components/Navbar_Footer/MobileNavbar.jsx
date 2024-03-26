@@ -17,7 +17,7 @@ const MobileNavbar = ({ OpenMobileNavbar }) => {
                 </div>
             </div>
             <div className='flex flex-col h-[70%] '>
-                <ul className="flex flex-col items-center w-full h-full justify-around  ml-4 xl:ml-8 mr-auto">
+                <ul className="flex flex-col items-center w-full h-full justify-around   mr-auto">
                     <li className={`p-3 xl:p-6  ${url.pathname === '/' ? 'text-blue-600' : ''}`}>
                         <Link to="/">
                             <span className='text-[22px] font-semibold'>Ana-Səhifə</span>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ContextGrand } from '../../../../../Context/ContextProvider'
@@ -15,7 +15,37 @@ import { Grid, Autoplay } from 'swiper/modules';
 
 
 const CategoryCartds = () => {
+
+
     const context = useContext(ContextGrand)
+
+    const AllCategoryFiltering = () => {
+        if (context.ChangeInputs !== undefined) {
+            const Filter = context.allCategoryState.filter((oneFilter) => {
+                return oneFilter.Name.toLowerCase().includes(context.ChangeInputs.toLowerCase())
+            })
+            return Filter
+        } else {
+            return []
+        }
+    }
+    const categoryStateFiltering = () => {
+        if (context.ChangeInputs !== undefined) {
+            const Filter = context.categoryState.filter((oneFilter) => {
+                return oneFilter.Name.toLowerCase().includes(context.ChangeInputs.toLowerCase())
+            })
+            return Filter
+        } else {
+            return []
+        }
+    }
+
+    useEffect(() => {
+        AllCategoryFiltering()
+        categoryStateFiltering()
+    }, [context.ChangeInputs])
+
+
 
     return (
         <section className='container mx-auto '>
@@ -57,42 +87,76 @@ const CategoryCartds = () => {
                             className="mySwiper"
                         >
                             {
-                                context.categoryState &&
-                                context.categoryState.map((oneMap, index) => (
 
-                                    <SwiperSlide >
-                                        <div key={index}>
-                                            <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
-                                            <div>
-                                                <p className='float-left'>{oneMap.Name}</p> <br />
-                                                <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
-                                                <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+                                categoryStateFiltering().length > 0 ? (
+                                    categoryStateFiltering().map((oneMap, index) => (
+
+                                        <SwiperSlide >
+                                            <div key={index}>
+                                                <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
+                                                <div>
+                                                    <p className='float-left'>{oneMap.Name}</p> <br />
+                                                    <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
+                                                    <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))
+                                        </SwiperSlide>
+                                    ))
+                                ) :
+                                    context.categoryState &&
+                                    context.categoryState.map((oneMap, index) => (
+
+                                        <SwiperSlide >
+                                            <div key={index}>
+                                                <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
+                                                <div>
+                                                    <p className='float-left'>{oneMap.Name}</p> <br />
+                                                    <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
+                                                    <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
                             }
                             {
-                                context.allCategoryState &&
-                                context.allCategoryState.map((oneMap, index) => (
-                                    <SwiperSlide >
-                                        <div key={index}>
-                                            <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
-                                            <div>
-                                                <p className='float-left'>{oneMap.Name}</p> <br />
-                                                <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
-                                                <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+
+
+                                AllCategoryFiltering().length > 0 ? (
+                                    AllCategoryFiltering().map((oneMap, index) => (
+
+                                        <SwiperSlide >
+                                            <div key={index}>
+                                                <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
+                                                <div>
+                                                    <p className='float-left'>{oneMap.Name}</p> <br />
+                                                    <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
+                                                    <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))
+                                        </SwiperSlide>
+                                    ))
+                                ) :
+
+                                    context.allCategoryState &&
+                                    context.allCategoryState.map((oneMap, index) => (
+                                        <SwiperSlide >
+                                            <div key={index}>
+                                                <img className='rounded-xl w-[200px] h-[200px]' src={oneMap.Img} alt="" />
+                                                <div>
+                                                    <p className='float-left'>{oneMap.Name}</p> <br />
+                                                    <span className='text-green-500 font-bold text-[15px] inline-block pr-[10px] pt-[15px] float-left'>{oneMap.Price}  ₼</span>
+                                                    <span className='text-gray-500 text-[15px] float-left pt-[15px] line-through  '>{oneMap.OldPrice} ₼</span>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
                             }
                         </Swiper>
                 }
 
             </div>
 
-            <div className='max-[768px]:block'>
+            <div className='max-[768px]:block hidden'>
                 <CategoryCardsMobile />
             </div>
         </section>
